@@ -10,6 +10,7 @@ resource "azurerm_storage_account" "storage" {
   network_rules {
     virtual_network_subnet_ids = ["${var.virtual_network_subnet_ids}"]
     bypass                     = ["${var.bypass}"]
+    ip_rules                   = ["${var.ip_rules}"]
     default_action             = "${var.default_action}"
   }
 

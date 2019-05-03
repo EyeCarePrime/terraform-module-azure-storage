@@ -39,6 +39,12 @@ variable "virtual_network_subnet_ids" {
   default     = [""]
 }
 
+variable "ip_rules" {
+  description = "List of allowed ips and cidr blocks. 100.64.0.0/10 is required if vnet is enabled. See https://en.wikipedia.org/wiki/Reserved_IP_addresses"
+  type        = "list"
+  default     = ["100.64.0.0/10"]
+}
+
 variable "bypass" {
   description = "List of allowed services"
   type        = "list"
